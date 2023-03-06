@@ -36,7 +36,7 @@ def derivatives(x,y,w_i, b_i,):
            dj_db += ((f_wb[i]-y[i]))/m
         return dj_dw, dj_db
 # Computing gradient descent
-def run_gd(x,y,w_i,b_i,num_iter,alpha,rate,pon=False):
+def compute_gd(x,y,w_i,b_i,num_iter,alpha,rate,pon=False):
         #rate of printing
         #for example rate = 100 print every 100 iteration
         #pon print or not
