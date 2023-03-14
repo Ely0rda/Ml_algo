@@ -41,6 +41,8 @@ def compute_gd(x,y,w_i,b_i,num_iter,alpha,rate,pon=False):
         #for example rate = 100 print every 100 iteration
         #pon print or not
         #to specify if you want to see cost,w,b every rate iteration or not
+                #Gradient decsent for linear regression
+
         w = w_i
         b = b_i
         J_history = []
@@ -51,7 +53,8 @@ def compute_gd(x,y,w_i,b_i,num_iter,alpha,rate,pon=False):
                 J_history.append(compute_cost(x,y,w,b))
                 if(i%rate == 0 and pon):
                         print(f"{i} : cost = {compute_cost(x,y,w,b)}, w = {w}, b = {b:0.2f}")                
-        print(f"w,b found by gradient descent: w: {w}, b: {b:0.2f}")        
+        print(f"w,b found by gradient descent: w: {w}, b: {b:0.2f}")    
+       
         return w,b,J_history               
 #Computing the cost function
 def compute_cost(x, y, w, b):
